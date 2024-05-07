@@ -1,0 +1,25 @@
+{
+  "name": "dentonmap",
+  "source": "./src/index.html",
+  "version": "0.7.0",
+  "description": "Disability Accessibility Map",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Alexander Evans, Ansel John, Dahun Ju, Edward Asante",
+  "license": "MIT",
+  "dependencies": {
+    "@googlemaps/adv-markers-utils": "^1.2.4",
+    "@googlemaps/js-api-loader": "^1.16.6",
+    "express": "^4.18.3",
+    "firebase": "^10.11.1"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "main": "app.js"
+}

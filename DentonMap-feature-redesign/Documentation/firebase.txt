@@ -1,0 +1,16 @@
+    
+    
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js'
+
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js'
+
+        // Add Firebase products that you want to use
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js'
+    </script>
+    https://firebase.google.com/docs/web/alt-setup
+
+    https://firebase.google.com/docs/auth/web/google-signin
