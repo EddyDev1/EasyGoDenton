@@ -22,7 +22,7 @@ let markers = [];
 
 export const loadMap = () => {
   const loader = new Loader({
-    apiKey: "AIzaSyDRk4DsR-vRdjPoVoUXZ35A6MZ2bXLx0Eo",
+    apiKey: "YOUR_API_KEY",
     version: "weekly",
   });
 
