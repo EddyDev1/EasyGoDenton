@@ -16,7 +16,6 @@ import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
     /* YOUR CONFIG HERE */
-    the api key was free and is being shutdown (deprecated)
 };
 
 // Firebase app
