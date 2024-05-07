@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Register</title>
+</head>
+
+<body>
+
+<div class="grid-container register-bg">
+    <header class="grid-item grid-header">
+        <a class="title-link header-app" href="./index.html"><h2>Denton Map Coders  </h2></a>
+        <div>
+            <!-- Map -->
+            <a class="header-app" id="appbar-map-link" href="./map.html">Map</a>
+            <!-- User Profile Page-->
+            <a class="header-app" id="appbar-myprofile-link" href="./user-profile.html">Profile</a>
+            <!-- The user's entered locations -->
+            <a class="header-app" id="appbar-mylocation-link" href="./myLocation.html">My Locations</a>
+            <!-- The Add a location from a verified user -->
+            <a class="header-app" id="appbar-addlocation-link" href="./addLocation.html">Add a Location</a>
+            <!-- Register -->
+            <a class="header-app" id="appbar-register-button" href="./register.html">Register</a>
+            <!-- Signing Out -->
+            <a class="header-app" id="appbar-signout-button" href="#">Sign Out</a>
+            <!-- Login -->
+            <a class="header-app" id="appbar-signin-button" href="./login.html">Sign In</a>
+        </div>
+    </header>  
+    
+    <main class="grid-item grid-register">
+        <form onsubmit="signup(event)" class="register-form main-flex" method="POST">
+            <div class="register-form-item" id="register-first-name">
+                <label for="first-name">First Name:</label><br>
+                <input type="text" id="first-name" name="first-name" class="register-form-item-input">
+            </div>
+            <div class="register-form-item" id="register-last-name">
+                <label for="last-name">Last Name:</label><br>
+                <input type="text" id="last-name" name = "last-name" class="register-form-item-input">
+            </div>
+            <div class="register-form-item" id="register-email">
+                <label for="e-mail">Email: </label><br>
+                <input type="email" id="e-mail" name="e-mail" class="register-form-item-input">
+            </div>
+            <div class="register-form-item" id="register-password">
+                <label type="password">Password:</label><br>
+                <input type="password" id="password" name="password" class="register-form-item-input">           
+            </div>
+            <div class="register-form-item" id="register-password-confirm">
+                <label type="password">Re-type Password:</label><br>
+                <input type="password" id="password-reconfirm" name="password-reconfirm" class="register-form-item-input">
+            </div>
+            <div class="register-fail" id="register-fail">
+                <p id="register-fail-message"></p>
+            </div>
+            <div class="register-form-item" id="register-form-submit">
+                <button type="submit" value="Submit">
+            </div>
+        </form>
+
+        <aside class="goto-login">
+            <p class="goto-login-item">Already have account?</p>
+            <a class="goto-login-item" href="map.html">Access our login page</a>
+        </aside>
+    </main>
+   
+
+    <footer class="grid-item grid-footer-nonmap">
+        <h3>Denton Internet Cartography Coders © 2024</h3>
+       
+        <div class="footer-flexbox-list">
+            <!-- Index -->
+            <a class="footer-item" href="./index.html">Home</a>
+            <!-- Map -->
+            <a class="footer-item" id="appbar-map-link" href="./map.html">Map</a>
+            <!-- User Profile Page-->
+            <a class="footer-item" id="appbar-profile-link" href="./user-profile.html">Profile</a>
+            <!-- The user's entered locations -->
+            <a class="footer-item" id="appbar-mylocation-link" href="./myLocation.html">My Locations</a>
+            <!-- The Add a location from a verified user -->
+            <a class="footer-item" id="appbar-addlocation-link" href="./addLocation.html">Add a Location</a>
+            <!-- Register -->
+            <a class="footer-item" id="app-register-link" href="./register.html">Register</a>
+            <!-- Signing Out -->
+            <a class="footer-item" id="app-signout-link" href="#">Sign Out</a>
+            <!-- Login -->
+            <a class="footer-item" id="app-signout-link" href="./login.html">Sign In</a>
+        </div>
+    </footer>
+
+
+</div> <!--grid-container-->
+
+<!-- app.js is front-end default for Node.js-->
+<script src="./scripts/app.js" type="module"></script>
+</body>
+
+</html>

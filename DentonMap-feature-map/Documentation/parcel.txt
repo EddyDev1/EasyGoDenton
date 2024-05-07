@@ -1,0 +1,27 @@
+Desc:
+    Parcel is a front-end bundler for NPM. What it does is
+    bundle all the HTML, CSS, and JS together to make
+    the site run faster.
+    
+    Parcel is a NPM module. 
+    Use the command:
+        npm install --save-dev parce-bundler
+    to install the Parcel module locally in your node_modules.
+
+    I have added two scripts to npm, start and build.
+    I did not make these scripts, but come from Gareth Brown.
+    start will begin a localhost version to test the firebase front-end,
+    and build will bundle all of the stuff together.
+
+
+
+To install:
+    npm install --save-dev parcel-bundler
+
+Scripts:
+    npm start
+    npm build
+
+Explanation
+    start: starts a locally hosted server to test
+    build: builds the public folder into production (makes it small and runs fast)
