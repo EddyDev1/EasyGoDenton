@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/profile.css" rel="stylesheet">
+    <title>User Profile Settings</title>
+</head>
+
+<body>
+  <script src="./scripts/profile.js" type="module"></script> 
+    <div class="headMenu">
+        <header class="grid-item grid-header">
+            <a class="title-link header-app" href="./index.html">
+                <h2>Denton Map Coders </h2>
+            </a>
+            <div>
+                <!-- Map -->
+                <a class="header-app" id="appbar-map-link" href="./map.html">Map</a>
+                <!-- User Profile Page-->
+                <a class="header-app" id="appbar-myprofile-link" href="./user-profile.html">Profile</a>
+                <!-- The user's entered locations -->
+                <a class="header-app" id="appbar-mylocation-link" href="./myLocation.html">My Locations</a>
+                <!-- The Add a location from a verified user -->
+                <a class="header-app" id="appbar-addlocation-link" href="./addLocation.html">Add a Location</a>
+                <!-- Register -->
+                <a class="header-app" id="appbar-register-button" href="./register.html">Register</a>
+                <!-- Signing Out -->
+                <a class="header-app" id="appbar-signout-button" href="#">Sign Out</a>
+                <!-- Login -->
+                <a class="header-app" id="appbar-signin-button" href="./login.html">Sign In</a>
+            </div>
+        </header>
+    </div>
+
+    <div class="grid-container profile">
+
+        <h3 id="ProfileSettingTitle">User Profile information & Settings</h3>
+
+        <main class="grid-profile-info">
+            <div class="profile-info-item" id="profile-firstname">
+                <div class="profile-type-and-value-container">
+                    <div class="profile-info-category">
+                        <p class="profile-info-category-text">First name</p>
+                    </div>
+                    <div class="profile-info-value">
+                        <p id="firstNameValue">safasf</p>
+                    </div>
+                </div>
+                <div class="profile-type-and-value-container">
+                    <div class="edit">
+                        <img class="edit-icon" src="./images/edit-icon.png" alt="edit">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="profile-info-item" id="profile-lastname">
+                <div class="profile-type-and-value-container">
+                    <div class="profile-info-category">
+                        <p class="profile-info-category-text">Last name</p>
+                    </div>
+                    <div class="profile-info-value">
+                        <p id="lastNameValue">safsad</p>
+                    </div>
+                </div>
+                <div class="profile-type-and-value-container">
+                    <div class="edit">
+                        <img class="edit-icon" src="./images/edit-icon.png" alt="edit">
+                    </div>
+                </div>
+            </div>
+
+            <button id="ChangePasswordBtn">Change password</button>
+
+            <div class="login-fail" id="login-fail">
+                <p id="login-fail-message"></p>
+            </div>
+
+
+        </main>
+    </div>
+
+    <div class="form-popup" id="changePassword">
+        <form onsubmit="changePassword(event)" class="form-container" method="POST">
+            <h1>Change Password</h1>
+
+            <label for="currPW"><b>Current Password</b></label>
+            <input type="password" placeholder="Enter Current Password" name="currPW" required>
+            <label for="newPW"><b>Current Password</b></label>
+            <input type="password" placeholder="Enter new Password" name="newPW" required>
+
+            <button type="submit" class="btn">Change password</button>
+            <button type="button" class="btn cancel" id="cancelPW">Close</button>
+        </form>
+    </div>
+    <div class="form-popup" id="changeFirstName">
+        <form onsubmit="changeFirstName(event)" class="form-container">
+            <h1>Change first name</h1>
+
+            <label for="firstName"><b>new first name</b></label>
+            <input type="text" placeholder="Enter firstName" name="firstName" required>
+
+            <button type="submit" class="btn">Update</button>
+            <button type="button" class="btn cancel" id="cancelChangeFirstName">Close</button>
+        </form>
+    </div>
+
+    <div class="form-popup" id="changeLastName">
+        <form onsubmit="changeLastName(event)" class="form-container">
+            <h1>Change last name</h1>
+
+            <label for="lastName"><b>new last name</b></label>
+            <input type="text" placeholder="Enter last Name" name="lastName" required>
+
+            <button type="submit" class="btn">Update</button>
+            <button type="button" class="btn cancel" id="cancelChangeLastName">Close</button>
+        </form>
+    </div>
+</body>
+
+</html>

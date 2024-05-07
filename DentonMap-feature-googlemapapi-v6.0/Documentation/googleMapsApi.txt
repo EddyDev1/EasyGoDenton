@@ -1,0 +1,3 @@
+[Installation]
+npm install --save @googlemaps/js-api-loader
+npm install --save @googlemaps/adv-markers-utils
