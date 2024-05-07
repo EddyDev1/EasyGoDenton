@@ -15,14 +15,7 @@ import { getDatabase } from "firebase/database";
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAHNcfAL_16FNmmg7ZGfcv9KKMSMpA42no",
-    authDomain: "denton-1cade.firebaseapp.com",
-    databaseURL: "https://denton-1cade-default-rtdb.firebaseio.com",
-    projectId: "denton-1cade",
-    storageBucket: "denton-1cade.appspot.com",
-    messagingSenderId: "844799469148",
-    appId: "1:844799469148:web:59267f15ea5a461fb9a899",
-    measurementId: "G-2HZ4JEHDDZ"
+    /* YOUR CONFIG HERE */
 };
 
 // Firebase app
