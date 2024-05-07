@@ -1,0 +1,1 @@
+The class will automatically update or create the document.

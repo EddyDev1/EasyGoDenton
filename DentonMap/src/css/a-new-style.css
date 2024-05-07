@@ -1,0 +1,86 @@
+/* CSS for the green rectangle */
+.green-rectangle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #00A950;
+    z-index: -1;
+}
+
+/* Container for centered content */
+.menu-container {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* CSS for the navigation bar */
+.navbar {
+    background-color: #00853E;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 0;
+    text-decoration: none;
+    border: 4px;
+    border-color: red
+}
+
+.navbar a img {
+    width: auto; /* Adjust the width as needed */
+    height: 6vh; /* Maintain aspect ratio */
+}
+
+/* CSS for the login form */
+.login-form {
+    text-align: center;
+}
+
+.login-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    color: white;
+    border: 0px; /* border color to green */
+    background-color: #00853E;
+}
+
+.login-form input::placeholder {
+    color: white; /* Change color of the placeholder text */
+}
+
+.login-form button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #d9d9d9;
+    color: #00853E;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form a {
+    color: white;
+    display: block;
+}
+h1{
+    color: white;
+}
+
+
