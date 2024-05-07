@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>EasyGoDenton</title>
+</head>
+<body>
+<aside class="grid-item grid-aside">
+    <div class="menu-container">
+        <!-- Green rectangle -->
+        <div class="green-rectangle"></div>
+        <div class="navbar">
+            <!-- Map -->
+            <a class="header-app" id="appbar-map-link" href="#map">Map</a>
+            <!-- User Profile Page-->
+            <a class="header-app" id="appbar-myprofile-link" href="#user-profile">Profile</a>
+            <!-- The user's entered locations -->
+            <a class="header-app" id="appbar-mylocation-link" href="#addLocation">Add a Spot</a>
+            <!-- The Add a location from a verified user -->
+            <a class="header-app" id="appbar-addlocation-link" href="#travel">Travel</a>
+            <!-- Register -->
+            <a class="header-app" id="appbar-register-button1" href="#register">Register</a>
+            <!-- Help-->
+            <a class="header-app" id="appbar-more-information" href="#help">Help</a>
+            <!-- Signing Out -->
+            <a class="header-app" id="appbar-signout-button" href="#">Sign Out</a>
+            <!-- Login -->
+            <a class="header-app" id="appbar-signin-button1" href="#login">Sign In</a>
+        </div>
+
+
+        <h1 id="set-header">Display Settings</h1>
+        <!-- Adjust Aside Menu settings-->
+
+        <!-- Div for download and locations-->
+        <button class="download-index" id="download">Download Locations</button>
+        <button class="download-index" id="filter">Filter: Off</button>
+        <main class="login-form">
+            <button class="download-index" id="submit-locations">Submit Locations</button>
+            <button class="download-index" id="add-markers">Add Marker: Off</button>
+            <button class="download-index" id="delete-markers">Delete Markers: Off</button>
+            <!-- Delete a Location -->    
+        </main>
+        <!-- Structure for dynamically added locations -->
+        <div id="temp-location" class="temp-location-box">
+            <!-- <id> is the current location
+            <div>
+            <h3>Location <id></h3>
+            <form>
+                <input type="text" class="location-desc" id="location-<id>-desc" placeholder="Enter description here">
+            </form>
+            </div> -->
+        </div>
+        <!-- <button class="download-index" id="delete-markers">Delete Markers: Off</button> -->
+        <div id="my-locations-component" class="">
+            <!-- <div id="parent-div-delete"></div> -->
+        </div>
+        <!-- Structure for dynamically added locations for deleting -->
+        <!-- 
+            <div>
+                <h3>Location <id></h3>
+                <form>
+                    <input type="text" class="location-desc" id="location-<id>-desc" placeholder="Enter description here">
+                </form>
+            </div>
+        -->
+
+        <main class="login-form">
+            <form onsubmit="signup(event)" class="login-form" method="POST">
+                <div class="register-form-item" id="register-first-name">
+                    <input type="text" id="first-name" name="first-name" class="register-form-item-input" placeholder="First Name">
+                </div>
+                <div class="register-form-item" id="register-last-name">
+                    <input type="text" id="last-name" name = "last-name" class="register-form-item-input" placeholder="Last Name">
+                </div>
+                <div class="register-form-item" id="register-email">
+                    <input type="email" id="register_e-mail" name="e-mail" class="register-form-item-input" placeholder="Email">
+                </div>
+                <div class="register-form-item" id="register-password">
+                    <input type="password" id="register_password" name="password" class="register-form-item-input" placeholder="Password">           
+                </div>
+                <div class="register-form-item" id="register-password-confirm">
+                    <input type="password" id="password-reconfirm" name="password-reconfirm" class="register-form-item-input" placeholder="Re-Enter Password">
+                </div>
+                <div class="register-fail" id="register-fail">
+                    <p id="register-fail-message"></p>
+                </div>
+                <div class="register-form-item" id="register-form-submit">
+                    <button type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+    
+            
+            <a id="appbar-signin-button2" href="#login">Already Have an Account?</a>
+    
+           
+        </main>
+
+        <main class="login-form">
+            <!-- <div class="flexbox-login"> -->
+            <!--test    -->
+            <form class="login-form">
+                    <input type="email" id="login_e-mail" name="e-mail" class="login-form-item-input" placeholder="Email">
+                
+                    <input type="password" id="login_password" name="password" class="login-form-item-input" placeholder="Password">           
+                
+                    <button type="submit" id="submit" value="Submit">Submit</button>
+            </form>
+            <div class="login-fail" id="login-fail">
+                <p id="login-fail-message">You must be <a href="#" id="login-signout-button">logged out</a> to sign in</p>
+            </div>
+            <aside class="goto-forget-password">
+                <button type="submit" value="Submit" class="goto-login-item" id="resetPW-button">Forget password</button>
+                <a id="appbar-register-button2" href="#register">Register New Account</a>
+            </aside>
+            <button id="signin-google">Sign in with Google</button>
+            <!-- </div> -->
+        </main>
+
+        <main class="login-form">
+            <form class="flex-form" id="add-location-form">
+                
+                <div id="floating-panel">
+                    <label for="mode">Enter Start and End Destination</label>
+                    <input class="add-location-box" id="start-input" type="text" placeholder="Start Location"/>
+                    <input class="add-location-box" id="end-input" type="text" placeholder="Destination"/>
+                    <label for="mode">Select Mode of Travel:</label>
+                    <select id="mode">
+                      <option value="DRIVING">Driving</option>
+                      <option value="WALKING">Walking</option>
+                      <option value="BICYCLING">Bicycling</option>
+                      <option value="TRANSIT">Transit</option>
+                    </select>
+                </div> 
+                <button id="get-route">Go</button>
+                <button id="clear-route">Clear Route</button>
+            </form>
+            <div id="add-location-error-message">
+                <p class="add-location-error-message-item">You must be logged in to enter a message</p>
+            </div> 
+        </main>
+
+        <!-- Help Page -->
+        <!-- Default: hidden, on click: flexbox-->
+        <main class="login-form">
+            <form class="flex-form" id="help-form">
+                <div class="help-class" id="help-parking-info-div">
+                <a id="help-a" title="Link to Official Texas Parking Information" href="https://www.txdmv.gov/motorists/disabled-parking-placards-plates" target="_blank" alt="Link to TX Parking rules"><img class="help-class" id="help-img" src="./images/blueicon.jpg" alt="Disability Icon"></a>
+                <p class="help-class" id="help-p">A parking placard or plate is ONLY valid when being used by the person with the disability or someone who is driving the person with the disability.
+
+                    It is a violation of state law to use the placard or plates for a disabled parking spot without the person with the disability in the vehicle. People who misuse disabled parking placards are subject to fines of up to $1,250 and/or up to 50 hours of community service.</p>
+                </div>
+            </form>
+        </main>
+
+        <div class="form-popup" id="changePassword">
+            <div class="form-container">
+                <h1>Change Password</h1>
+
+                <label for="currPW"><b>Current Password</b></label>
+                <input type="password" placeholder="Enter Current Password" name="currPW" id="currPWInput" required>
+                <label for="newPW"><b>New Password</b></label>
+                <input type="password" placeholder="Enter new Password" name="newPW" id="newPWInput" required>
+
+                <button type="button" class="btn" id="changePWBTN">Change password</button>
+                <p id = "errorMSGPW"></p>
+                <button type="button" class="btn cancel" id="cancelPW">Close</button>
+            </div>
+        </div>
+        <div class="form-popup" id="changeFirstName">
+            <div class="form-container">
+                <h1>Change first name</h1>
+
+                <label for="firstName"><b>new first name</b></label>
+                <input type="text" placeholder="Enter firstName" name="firstName" id="firstNameInput" required>
+                <p id="firstNameErrorMSG"></p>
+                <button type="button" class="btn" id="firstNameUpdateBTN">Update</button>
+                <button type="button" class="btn cancel" id="cancelChangeFirstName">Close</button>
+            </div>
+        </div>
+
+        <div class="form-popup" id="changeLastName">
+            <div class="form-container">
+                <h1>Change last name</h1>
+
+                <label for="lastName"><b>new last name</b></label>
+                <input type="text" placeholder="Enter last Name" name="lastName" id ="lastNameInput"required>
+                <p id="lastNameErrorMSG"></p>
+                <button type="button" class="btn" id="lastNameUpdateBTN">Update</button>
+                <button type="button" class="btn cancel" id="cancelChangeLastName">Close</button>
+            </div>
+        </div>
+
+        <div class="grid-container profile">
+
+            <main class="grid-profile-info">
+                <div class="profile-info-item">
+                    <div class="profile-type-and-value-container">
+                        <div class="profile-info-category">
+                            <p class="profile-info-category-text">First name</p>
+                        </div>
+                        <div class="profile-info-value">
+                            <p id="firstNameValue">Enter First Name</p>
+                        </div>
+                    </div>
+                    <div class="profile-type-and-value-container">
+                        <div class="edit">
+                            <button type="button" class="btn" id="profile-firstname">
+                                <!-- <img class="edit-icon" src="./images/edit-icon.png" alt="edit"> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="profile-info-item" id="profile-lastname">
+                    <div class="profile-type-and-value-container">
+                        <div class="profile-info-category">
+                            <p class="profile-info-category-text">Last name</p>
+                        </div>
+                        <div class="profile-info-value">
+                            <p id="lastNameValue">Enter Last Name</p>
+                        </div>
+                    </div>
+                    <div class="profile-type-and-value-container">
+                        <div class="edit">
+                            <button type="button" class="btn" id="profile-lastname">
+                                <!-- <img class="edit-icon" src="./images/edit-icon.png" alt="edit"> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="ChangePasswordBtn">Change password</button>
+
+                <div class="login-fail" id="login-fail">
+                    <p id="login-fail-message"></p>
+                </div>
+
+
+                <main class="grid-main">
+                    <!-- Main Body -->
+                    <section class="center-layout">
+                        <h1>My Locations</h1>
+                        <div id="my-locations-component">
+                            
+                        </div>
+                    </section>  
+                </main>
+            </main>
+        </div>
+        
+    </div>
+    
+</aside>
+
+<main class="grid-item grid-map">
+    <div class="pac-card" id="pac-card">
+        <div>
+            <div id="title">Search</div>
+            <div id="type-selector" class="pac-controls">
+                <input
+                        type="radio"
+                        name="type"
+                        id="changetype-all"
+                        checked="checked"
+                />
+                <label for="changetype-all">All</label>
+
+                <input type="radio" name="type" id="changetype-establishment" />
+                <label for="changetype-establishment">establishment</label>
+
+                <input type="radio" name="type" id="changetype-address" />
+                <label for="changetype-address">address</label>
+
+                <input type="radio" name="type" id="changetype-geocode" />
+                <label for="changetype-geocode">geocode</label>
+
+                <input type="radio" name="type" id="changetype-cities" />
+                <label for="changetype-cities">(cities)</label>
+
+                <input type="radio" name="type" id="changetype-regions" />
+                <label for="changetype-regions">(regions)</label>
+            </div>
+            <br />
+            <div id="strict-bounds-selector" class="pac-controls">
+                <input type="checkbox" id="use-location-bias" value="" checked />
+                <label for="use-location-bias">Bias to map viewport</label>
+
+                <input type="checkbox" id="use-strict-bounds" value="" />
+                <label for="use-strict-bounds">Strict bounds</label>
+            </div>
+        </div>
+        <div id="pac-container">
+            <input id="pac-input" type="text" placeholder="Enter a location" />
+        </div>
+    </div>
+    <div id="map" class="map"></div>
+    <div id="infowindow-content">
+        <span id="place-name" class="title"></span><br />
+        <span id="place-address"></span>
+    </div>
+</main>
+<!-- app.js is front-end default for Node.js-->
+<script src="./scripts/app.js" type="module"></script>
+</body>
+</html>
