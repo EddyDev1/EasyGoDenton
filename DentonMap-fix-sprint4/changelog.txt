@@ -1,0 +1,37 @@
+Alexander Evans
+
+March 23, 2024
+Add addLocationInterface for addlocation.html batch Files
+Added singleton object for auth. Instead of having to constantly call getAuth() use
+import auth from './firebaseAuthenticationClass.js'
+auth.myauth is the authentication object from firebase
+
+March 22, 2024
+Changed auth.user to result.user
+Deleted helloworld console log
+
+March 18, 2024
+Added addLocation and functionality
+Added if(submitButton) to login.js email login to prevent execution if there is not submitbutton.
+Added delete button to mylocations
+Got rid of build
+Added mylocation and addlocation to be hidden
+
+March 13, 2024
+[FIREBASE]
+Changed typo, firebaseConfiguartion -> firebaseConfiguration
+Added firebaseSignout which allows the user to sign out
+Fixed initializeSigninButtons to work as intended. 
+
+Alexander Evans
+March 12, 2024
+Most of these changes come from Gareth Brown's guide to setting up a firebase CDN
+Moved front-end code into src for bundling
+Added Firebase script to bottom of Files
+Added firebase folder to put firebase scripts into
+Added button flipping so that JavaScript shows and hide certain buttons when logged in and out.
+
+Alexander Evans
+March 11, 2024
+Changed public to src to make viable with Parcel bundler.
+

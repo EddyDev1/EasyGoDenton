@@ -1,0 +1,16 @@
+lat
+long
+descr
+type
+locationgroup
+isPrimary
+polygon
+userid
+
+
+Factory
+
+LocationGroup col
+doc group id
+col primaryid
+secondaryid

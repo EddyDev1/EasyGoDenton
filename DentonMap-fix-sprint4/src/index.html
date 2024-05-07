@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denton Map</title>
+    <link href="./css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item grid-header">
+            <a class="title-link header-app" href="./index.html"><h2>Denton Map Coders  </h2></a>
+            <div>
+                <!-- Map -->
+                <a class="header-app" id="appbar-map-link" href="./map.html">Map</a>
+                <!-- User Profile Page-->
+                <a class="header-app" id="appbar-myprofile-link" href="./user-profile.html">Profile</a>
+                <!-- The user's entered locations -->
+                <a class="header-app" id="appbar-mylocation-link" href="./myLocation.html">My Locations</a>
+                <!-- The Add a location from a verified user -->
+                <a class="header-app" id="appbar-addlocation-link" href="./addLocation.html">Add a Location</a>
+                <!-- Register -->
+                <a class="header-app" id="appbar-register-button" href="./register.html">Register</a>
+                <!-- Signing Out -->
+                <a class="header-app" id="appbar-signout-button" href="#">Sign Out</a>
+                <!-- Login -->
+                <a class="header-app" id="appbar-signin-button" href="./login.html">Sign In</a>
+            </div>
+        </header>  
+
+        <aside class="grid-item grid-aside">
+            Aside Content goes here...
+        </aside>
+        <main class="grid-item grid-map">
+            <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XTOdzhNLnI8sTH1uTDDCiest8s5A3s8&ehbc=2E312F&noprof=1"></iframe> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53398.289416518535!2d-97.1467177!3d33.23000385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864db5798c0386dd%3A0xd73dead569ecc061!2sDenton%20North%20Branch%20Library!5e0!3m2!1sen!2sus!4v1709243057011!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <div id="map"></div> -->
+        </main>
+        <footer class="grid-item grid-footer-nonmap">
+            <h3>Denton Internet Cartography Coders © 2024</h3>
+           
+            <div class="footer-flexbox-list">
+                <!-- Index -->
+                <a class="footer-item" href="./index.html">Home</a>
+                <!-- Map -->
+                <a class="footer-item" id="appbar-map-link" href="./map.html">Map</a>
+                <!-- User Profile Page-->
+                <a class="footer-item" id="appbar-profile-link" href="./user-profile.html">Profile</a>
+                <!-- The user's entered locations -->
+                <a class="footer-item" id="appbar-mylocation-link" href="./myLocation.html">My Locations</a>
+                <!-- The Add a location from a verified user -->
+                <a class="footer-item" id="appbar-addlocation-link" href="./addLocation.html">Add a Location</a>
+                <!-- Register -->
+                <a class="footer-item" id="app-register-link" href="./register.html">Register</a>
+                <!-- Signing Out -->
+                <a class="footer-item" id="app-signout-link" href="#">Sign Out</a>
+                <!-- Login -->
+                <a class="footer-item" id="app-signout-link" href="./login.html">Sign In</a>
+            </div>
+        </footer>
+</div>
+
+<!-- app.js is front-end default for Node.js-->
+<script src="./scripts/app.js" type="module"></script>
+</body>
+</html>
