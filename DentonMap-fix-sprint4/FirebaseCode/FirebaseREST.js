@@ -5,7 +5,7 @@ const express = require('express');
 const http = require('http');
 const path  = require('path');
 
-const serviceAccountPath = path.join(__dirname, '..', '..', '..', '..', '..', 'Downloads', 'denton-1cade-firebase-adminsdk-qtj53-67527005f2.json');
+const serviceAccountPath = // acc_deleted;
 const serviceAccount = require(serviceAccountPath);
 
 admin.initializeApp({
