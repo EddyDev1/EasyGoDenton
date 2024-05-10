@@ -1,4 +1,15 @@
 # DentonMap
+
+Edward Asante
+
+Alexander Evans (@AlexEUNT)
+
+Ansel John (@DarkUnicord19)
+
+Dahun Ju (@DahunDev)
+
+<br>
+
 [Dev-Installation]
 npm install -g firebase-tools <-- only needs to be done once as it's global
 npm install firebase
